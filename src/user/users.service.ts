@@ -27,6 +27,7 @@ export class UsersService {
       where: { phone: user.phone },
     });
 
+
     if (existingUserEmail) {
       throw new ConflictException('Un utilisateur avec cet email existe déjà');
     }
